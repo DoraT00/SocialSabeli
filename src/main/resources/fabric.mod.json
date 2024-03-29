@@ -1,0 +1,48 @@
+{
+	"schemaVersion": 1,
+	"id": "socialsabeli",
+	"version": "${version}",
+	"name": "SocialSabeli",
+	"description": "Варкута, карнаул, челяба ЭОО ЭООО",
+	"authors": [
+		"DoraT0,MrNikison"
+	],
+	"contact": {
+		"homepage": "https://t.me/bukashkii",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "LOLI",
+	"icon": "assets/socialsabeli/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "com.dorat0.SocialSabeli",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "com.dorat0.SocialSabeliClient",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"socialsabeli.mixins.json",
+		{
+			"config": "socialsabeli.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*",
+		"fabric-language-kotlin": ">=1.9.23"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
